@@ -20,7 +20,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
- 
+
 package corySherman.snake;
 
 import javax.swing.*;
@@ -31,13 +31,13 @@ import java.awt.geom.Point2D;
 
 class PowerUp extends Apple
 {
-	public PowerUp(int[] location)
-	{
-		super(location);
-	}
-	
-	public void power(Snake snake)
-	{
-		snake.power();
-	}
+    public PowerUp(int[] location)
+    {
+        super(location);
+    }
+
+    public void power(Snake snake)
+    {
+        snake.power();
+    }
 }
