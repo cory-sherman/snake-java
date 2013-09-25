@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="snake-java" basedir="." default="jar">
+    <property name="src-dir" value="src"/>
+    <property name="jar-dir" value="jar"/>
+    <property name="build-dir" value="build"/>
+    <property name="main-class" value="corySherman.snake.TestDriver"/>
+
+    <target name="jar" depends="build" description="Creates an executable jar">
+        <mkdir dir="${jar-dir}"/>
+        <jar destfile="${jar-dir}/${ant.project.name}.jar"
+             basedir="${build-dir}">
+             <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+             </manifest>
+        </jar>
+
+    </target>
+
+    <target name="build">
+        <mkdir dir="${build-dir}"/>
+        <javac srcdir="${src-dir}" destdir="${build-dir}" target="1.7"/>
+    </target>
+
+    <target name="uninstall" depends="clean" description="Removes build and jar files">
+        <delete dir="${jar-dir}" verbose="true"/>
+    </target>
+
+    <target name="clean" description="Removes build files">
+        <delete dir="${build-dir}" verbose="true"/>
+    </target>
+
+</project>
