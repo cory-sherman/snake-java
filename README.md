@@ -3,7 +3,12 @@ snake-java
 
 Originally a weekend project from AP Computer Science in 2010.
 
-The `src` directory contains all the original source files from May-June 2010, 
-although `index.html` was modified in March of 2011. The applet isn't properly embedded anyway.
+Source files are in the `src` directory.
 
-In 2010 I was using Eclipse to handle building, so there is no build script yet.
+Build
+---
+Run `ant` from the project directory.
+
+Run
+---
+Run `java -jar jar/snake-jar.jar`, or open `index.html`.
