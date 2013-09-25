@@ -1,3 +1,4 @@
+/*
 The MIT License (MIT)
 
 Copyright (c) 2013 Cory Sherman <cory@coryscorner.com>
@@ -18,3 +19,45 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+package corySherman.snake;
+
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import java.awt.Color;
+import java.awt.geom.Point2D;
+
+import java.util.*;
+
+
+class Apple
+{
+    protected int[] myLocation;
+
+    public Apple(int[] location)
+    {
+        myLocation = location;
+    }
+
+    public int getX()
+    {
+        return myLocation[1];
+    }
+
+    public int getY()
+    {
+        return myLocation[0];
+    }
+
+    public int[] getSquare()
+    {
+        return myLocation;
+    }
+
+    public boolean equals(Object other)
+    {
+        return other instanceof Apple ? ((Apple)other).getX() == getX() && ((Apple)other).getY() == getY()  : false;
+    }
+}

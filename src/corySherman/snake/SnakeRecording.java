@@ -1,3 +1,4 @@
+/*
 The MIT License (MIT)
 
 Copyright (c) 2013 Cory Sherman <cory@coryscorner.com>
@@ -18,3 +19,24 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+package corySherman.snake;
+
+import javax.swing.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+
+import java.awt.*;
+
+import java.util.ArrayList;
+
+public interface SnakeRecording
+{
+    public int size();
+    public double[] get(int i);
+    public void addSegment();
+    public void add(double[] loc);
+    public void clear();
+    public void setMaxSize(int i);
+}
